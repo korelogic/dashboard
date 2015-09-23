@@ -143,7 +143,7 @@ var Dashboard = {
 		
 		jQuery.ajax({
 			type: 'POST',
-			url: Symphony.Context.get('root') + '/symphony/extension/dashboard/save_order/',
+			url: Symphony.Context.get('root') + '/kms/extension/dashboard/save_order/',
 			data: post_data,
 		});
 		
@@ -170,7 +170,7 @@ var Dashboard = {
 		var self = this;
 		jQuery.ajax({
 			type: 'GET',
-			url: Symphony.Context.get('root') + '/symphony/extension/dashboard/panel_config/?type=' + panel_type + ((id != null) ? ('&id=' + id) : ''),
+			url: Symphony.Context.get('root') + '/kms/extension/dashboard/panel_config/?type=' + panel_type + ((id != null) ? ('&id=' + id) : ''),
 			success: function(data) {
 				var form = jQuery('#save-panel');
 				// if form exists in the DOM it needs to be removed first
@@ -203,7 +203,7 @@ var Dashboard = {
 		
 		jQuery.ajax({
 			type: 'POST',
-			url: Symphony.Context.get('root') + '/symphony/extension/dashboard/panel_config/',
+			url: Symphony.Context.get('root') + '/kms/extension/dashboard/panel_config/',
 			data: post_data,
 			success: function(data) {
 				// Must be an error, show the form again:
