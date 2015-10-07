@@ -54,12 +54,12 @@
 		
 		<xsl:choose>
 			<xsl:when test="$field/item/@section-handle">
-				<a href="/symphony/publish/{$field/item/@section-handle}/edit/{$field/item/@id}/">
+				<a href="/kms/publish/{$field/item/@section-handle}/edit/{$field/item/@id}/">
 					<xsl:value-of select="$field"/>
 				</a>
 			</xsl:when>
 			<xsl:when test="position()=1">
-				<a href="/symphony/publish/{//section/@handle}/edit/{$entry/@id}/">
+				<a href="/kms/publish/{//section/@handle}/edit/{$entry/@id}/">
 					<xsl:value-of select="$field"/>
 				</a>
 			</xsl:when>
